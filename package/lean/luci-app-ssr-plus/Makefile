@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-ssr-plus
-PKG_VERSION:=2
+PKG_VERSION:=1
 PKG_RELEASE:=132
 
 PKG_CONFIG_DEPENDS:= CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_Shadowsocks \
@@ -17,42 +17,42 @@ define Package/$(PKG_NAME)/config
 config PACKAGE_$(PKG_NAME)_INCLUDE_Shadowsocks
 	bool "Include Shadowsocks New Version"
 	default y if x86_64
-
+	
 config PACKAGE_$(PKG_NAME)_INCLUDE_V2ray
 	bool "Include V2ray"
 	default y if x86_64
-
+	
 config PACKAGE_$(PKG_NAME)_INCLUDE_Trojan
 	bool "Include Trojan"
 	default y if x86_64
-
+	
 config PACKAGE_$(PKG_NAME)_INCLUDE_Kcptun
 	bool "Include Kcptun"
 	default n
-
+	
 config PACKAGE_$(PKG_NAME)_INCLUDE_ShadowsocksR_Server
 	bool "Include ShadowsocksR Server"
 	default y if x86_64
-
+	
 config PACKAGE_$(PKG_NAME)_INCLUDE_ShadowsocksR_Socks
 	bool "Include ShadowsocksR Socks and Tunnel"
 	default y if x86_64
 endef
 
 define Package/luci-app-ssr-plus
-	SECTION:=luci
+ 	SECTION:=luci
 	CATEGORY:=LuCI
 	SUBMENU:=3. Applications
 	TITLE:=SS/SSR/V2Ray LuCI interface
 	PKGARCH:=all
 	DEPENDS:=+shadowsocksr-libev-alt +ipset +ip-full +iptables-mod-tproxy +dnsmasq-full +coreutils +coreutils-base64 +pdnsd-alt +wget \
-			+PACKAGE_$(PKG_NAME)_INCLUDE_Shadowsocks:shadowsocks-libev-ss-redir \
-			+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray:v2ray \
-			+PACKAGE_$(PKG_NAME)_INCLUDE_Trojan:trojan \
-			+PACKAGE_$(PKG_NAME)_INCLUDE_Trojan:ipt2socks \
-			+PACKAGE_$(PKG_NAME)_INCLUDE_Kcptun:kcptun-client \
-			+PACKAGE_$(PKG_NAME)_INCLUDE_ShadowsocksR_Server:shadowsocksr-libev-server \
-			+PACKAGE_$(PKG_NAME)_INCLUDE_ShadowsocksR_Socks:shadowsocksr-libev-ssr-local
+            +PACKAGE_$(PKG_NAME)_INCLUDE_Shadowsocks:shadowsocks-libev-ss-redir \
+            +PACKAGE_$(PKG_NAME)_INCLUDE_V2ray:v2ray \
+            +PACKAGE_$(PKG_NAME)_INCLUDE_Trojan:trojan \
+            +PACKAGE_$(PKG_NAME)_INCLUDE_Trojan:ipt2socks \
+            +PACKAGE_$(PKG_NAME)_INCLUDE_Kcptun:kcptun-client \
+            +PACKAGE_$(PKG_NAME)_INCLUDE_ShadowsocksR_Server:shadowsocksr-libev-server \
+            +PACKAGE_$(PKG_NAME)_INCLUDE_ShadowsocksR_Socks:shadowsocksr-libev-ssr-local
 endef
 
 define Build/Prepare
@@ -89,8 +89,8 @@ endef
 define Package/luci-app-ssr-plus/prerm
 #!/bin/sh
 if [ -z "$${IPKG_INSTROOT}" ]; then
-	/etc/init.d/shadowsocksr disable
-	/etc/init.d/shadowsocksr stop
+     /etc/init.d/shadowsocksr disable
+     /etc/init.d/shadowsocksr stop
 fi
 exit 0
 endef
