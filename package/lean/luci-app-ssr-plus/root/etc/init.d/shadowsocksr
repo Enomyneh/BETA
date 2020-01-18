@@ -245,7 +245,6 @@ timeout=10;
 neg_domain_pol=on;
 proc_limit=2;
 procq_limit=8;
-par_queries=1;
 }
 server {
 label= "ssr-usrdns";
