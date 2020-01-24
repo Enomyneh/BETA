@@ -1,7 +1,0 @@
-config PwdHackDeny 'PwdHackDeny'
-	option port1 '22'
-	option port2 '80'
-	option enabled '0'
-	option time '600'
-	option sum '5'
-
