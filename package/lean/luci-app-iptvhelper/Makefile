@@ -11,7 +11,7 @@ PKG_MAINTAINER:=Shun Li <riverscn@gmail.com>
 PKG_LICENSE:=GPL-3.0
 
 LUCI_TITLE:=LuCI support for iptvhelper
-LUCI_DEPENDS:=+luci-compat +iptvhelper
+LUCI_DEPENDS:=+iptvhelper
 LUCI_PKGARCH:=all
 
 include $(TOPDIR)/feeds/luci/luci.mk
