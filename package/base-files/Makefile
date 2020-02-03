@@ -177,6 +177,7 @@ define Package/base-files/install
 
 	chmod 0600 $(1)/etc/shadow
 	chmod 1777 $(1)/tmp
+	chmod 0775 $(1)/usr/bin/xauth
 
 	$(call ImageConfigOptions,$(1))
 	$(call Package/base-files/install-target,$(1))
