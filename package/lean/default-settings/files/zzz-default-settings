@@ -28,7 +28,7 @@ sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
 wifi up
 
 sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
-echo "DISTRIB_REVISION=' .9TD-40'" >> /etc/openwrt_release
+echo "DISTRIB_REVISION=' .9TD-80'" >> /etc/openwrt_release
 sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
 echo "DISTRIB_DESCRIPTION='VX'" >> /etc/openwrt_release
 
