@@ -92,8 +92,8 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'Billgates';
-    src: url('../fonts/Billgates.eot?#iefix') format('embedded-opentype'),  url('../fonts/Billgates.woff') format('woff'), url('../fonts/Billgates.ttf')  format('truetype'), url('../fonts/Billgates.svg#Billgates') format('svg');
+    font-family: 'Overlock';
+    src: url('../fonts/Overlock.eot?#iefix') format('embedded-opentype'),  url('../fonts/Overlock.woff') format('woff'), url('../fonts/Overlock.ttf')  format('truetype'), url('../fonts/Overlock.svg#Overlock') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -1574,7 +1574,7 @@ div > .table > .tbody > .tr:nth-of-type(2n) {
 .main > .main-left > .sidenav-header > .brand {
     font-size: 1.8rem;
     color: #5e72e4;
-    font-family: "Billgates";
+    font-family: "Overlock";
     text-decoration: none;
     padding-left: 2rem;
     cursor: default;
@@ -1722,7 +1722,7 @@ header > .fill > .container{
 header > .fill > .container > .brand{
     font-size: 1.5rem;
     color: #fff;
-    font-family: "Billgates";
+    font-family: "Overlock";
     text-decoration: none;
     padding-left: 1rem;
     cursor: default;
