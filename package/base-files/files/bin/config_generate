@@ -96,7 +96,7 @@ generate_network() {
 		static)
 			local ipad
 			case "$1" in
-				lan) ipad=${ipaddr:-"7.7.7.247"} ;;
+				lan) ipad=${ipaddr:-"7.7.7.252"} ;;
 				*) ipad=${ipaddr:-"7.7.$((addr_offset++)).1"} ;;
 			esac
 
@@ -234,7 +234,7 @@ generate_static_system() {
 	uci -q batch <<-EOF
 		delete system.@system[0]
 		add system system
-		set system.@system[-1].hostname='TD-80.3x3'
+		set system.@system[-1].hostname='LT-80'
 		set system.@system[-1].timezone='UTC'
 		set system.@system[-1].ttylogin='0'
 		set system.@system[-1].log_size='64'
